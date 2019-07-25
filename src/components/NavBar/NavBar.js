@@ -4,21 +4,20 @@ import './style.css';
 
 function Navbar(props) {
     return (
-        <div id="navbar">
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-sm-3" id="brand">
-                        <h1 class="navbar-brand">Clicky game</h1>
-                    </div>
-                    <div className="col-sm-6" id="message">
+        <div>
+            <nav class="navbar">
+                <h1 class="navbar-brand" href="#">Clicky game</h1>
+                <ul class="navbar-nav">
+                    <li lcass="nav-item">
                         <div>{props.message}</div>
-                    </div>
-                    <div className="col-sm-3" id="score">
+                    </li>
+                    <li lcass="nav-item">
                         <div>Score: {props.score} | Top Score: {props.topScore}</div>
-                    </div>
-                </div>
-            </div>
+                    </li>
+                </ul>
+            </nav>
         </div>
+
     );
 }
 

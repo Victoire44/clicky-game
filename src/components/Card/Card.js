@@ -1,12 +1,16 @@
 import React, { Component } from "react";
-import "./Card.css"
+import "./style.css"
 
-const Card = props => (
-    <div className="card" onClick={() => props.score(props.id)}>
-        <div className="img-container">
-            <img src={props.image} alt={props.name}  />
+function Card(props) {
+    return (
+        <div class="col-md-3">
+            <div className="card mb-4" >
+                <div className="img-container">
+                    <img onClick={props.addOne} src={props.image} alt={props.name} id={props.id} />
+                </div>
+            </div>
         </div>
-    </div>
-);
+    )
+}
 
 export default Card;
