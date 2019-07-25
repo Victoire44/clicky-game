@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "bear",
+      "image": "images/bear.jpg"
+    },
+    {
+      "id": 2,
+      "name": "bird",
+      "image": "images/bird.jpg"
+    },
+    {
+      "id": 3,
+      "name": "deer",
+      "image": "images/deer.jpg"
+    },
+    {
+      "id": 4,
+      "name": "eagle",
+      "image": "images/eagle.jpg"
+    },
+    {
+      "id": 5,
+      "name": "fox",
+      "image": "images/fox.jpg"
+    },
+    {
+      "id": 6,
+      "name": "lynx",
+      "image": "images/lynx.jpg"
+    },
+    {
+      "id": 7,
+      "name": "owl",
+      "image": "images/owl.jpg"
+    },
+    {
+      "id": 8,
+      "name": "raccon",
+      "image": "images/raccoon.jpg"
+    },
+    {
+      "id": 9,
+      "name": "swan",
+      "image": "images/swan.jpg"
+    },
+    {
+      "id": 10,
+      "name": "squirrel",
+      "image": "images/squirrel.jpg"
+    },
+    {
+      "id": 11,
+      "name": "wildlife",
+      "image": "images/wildlife.jpg"
+    },
+    {
+      "id": 12,
+      "name": "wolf",
+      "image": "images/wolf.jpg"
+    }
+  ]
+  
