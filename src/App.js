@@ -14,43 +14,37 @@ class App extends Component {
     score: 0,
     topScore: 0,
     message: "",
-    cardCliked: []
+    cardsCliked: []
   }
 
-
   cardClicked = id => {
-    if (this.state.animals.includes(id)) {
+    if (this.state.cardsCliked.includes(id)) {
       this.setState({
-        message: "You guessed incorrectly!"
+        score: 0,
+        message: "You guessed incorrectly!",
+        cardsCliked: []
       });
       shuffle(this.state.animals);
-      this.reset()
+
     } else {
+      this.state.cardsCliked.push(id)
+      const newScore = this.state.score + 1;
       this.setState({
-        score: this.state.topScore + 1,
-        topScore: this.state.topScore + 1,
+        score: newScore,
+        topScore: newScore < this.state.topScore ? this.state.topScore : newScore,
         message: "You guessed correctly!"
       });
       shuffle(this.state.animals);
     }
-  };
-
-  win = () => {
-    if (this.state.topScore === 12) {
+    if (this.state.topScore === 11) {
       this.setState({
-        message: "You win!"
+        message: "You win!",
+        score: 0,
+        topScore: 0,
+        cardsCliked: []
       });
       shuffle(this.state.animals);
-      this.reset()
     }
-  }
-
-  reset = () => {
-    this.setState({
-      score: 0,
-      topScore: this.state.topScore,
-      message: ""
-    });
   };
 
   render() {
@@ -67,8 +61,6 @@ class App extends Component {
             {this.state.animals.map(card => (
               <Card
                 cardClicked={this.cardClicked}
-                reset={this.reset}
-                win={this.win}
                 id={card.id}
                 image={card.image}
               />
