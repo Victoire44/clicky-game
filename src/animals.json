@@ -6,8 +6,8 @@
     },
     {
       "id": 2,
-      "name": "bird",
-      "image": "images/bird.jpg"
+      "name": "roe deer",
+      "image": "images/roe-deer.jpg"
     },
     {
       "id": 3,
@@ -41,8 +41,8 @@
     },
     {
       "id": 9,
-      "name": "swan",
-      "image": "images/swan.jpg"
+      "name": "panda",
+      "image": "images/panda.jpg"
     },
     {
       "id": 10,
