@@ -13,7 +13,7 @@ class App extends Component {
     animals,
     score: 0,
     topScore: 0,
-    message: "",
+    status: "none",
     cardsCliked: []
   }
 
@@ -21,7 +21,7 @@ class App extends Component {
     if (this.state.cardsCliked.includes(id)) {
       this.setState({
         score: 0,
-        message: "You guessed incorrectly!",
+        status: "incorrect",
         cardsCliked: []
       });
       shuffle(this.state.animals);
@@ -32,13 +32,14 @@ class App extends Component {
       this.setState({
         score: newScore,
         topScore: newScore < this.state.topScore ? this.state.topScore : newScore,
-        message: "You guessed correctly!"
-      });
+        status: "correct"
+          });
       shuffle(this.state.animals);
     }
-    if (this.state.topScore === 11) {
+    
+    if (this.state.topScore + 1 === 12) {
       this.setState({
-        message: "You win!",
+        status: "win",
         score: 0,
         topScore: 0,
         cardsCliked: []
@@ -51,7 +52,7 @@ class App extends Component {
     return (
       <Wrapper>
         <NavBar
-          message={this.state.message}
+          status={this.state.status}
           score={this.state.score}
           topScore={this.state.topScore}
         />
