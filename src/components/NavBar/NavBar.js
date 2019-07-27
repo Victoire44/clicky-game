@@ -19,6 +19,7 @@ function NavBar(props) {
             color = "yellow"
             break;
         default:
+            message = "Click an image to begin!"
     }
     console.log(message)
     return (
