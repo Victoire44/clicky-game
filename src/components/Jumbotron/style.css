@@ -3,10 +3,11 @@ h2 {
     font-size: 40px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.img-fluid {
-    width: 100%;
+.jumbotron {
+    background-image: url(forest.jpg);
     height: 400px;
-    object-fit: cover
+    margin-bottom: 80px;
 }
