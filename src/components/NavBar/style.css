@@ -5,7 +5,6 @@
   top: 0;
   z-index: 1;
   width: 100%;
-
 }
 
 .logo {
@@ -15,4 +14,21 @@
 
 .nav-item {
   font-size: 30px;
+}
+
+.nav-item {
+display: flex;
+justify-content: flex-end ;
+}
+
+
+@media screen and (min-width: 1000px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin-left: 50px;
+  }
 }

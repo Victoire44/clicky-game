@@ -8,7 +8,7 @@ function NavBar(props) {
     switch (props.status) {
         case "correct":
             message = "You guessed correctly!"
-            color = "rgb(206,277,126)"
+            color = "rgb(18,41,36)"
             break;
         case "incorrect":
             message = "You guessed incorrectly!"
@@ -27,17 +27,17 @@ function NavBar(props) {
             <nav className="navbar">
                 <div className="container">
                     <img src={require("./logo.png")} alt="logo" className="logo"></img>
-                    <ul className="navbar-nav d-flex flex-row">
-                        <li className="nav-item" style={{color: color}}>
+                    <ul className="navbar-nav">
+                        <li className="nav-item" style={{ color: color }}>
                             {message}
                         </li>
-                        <li className="nav-item ml-5">
+                        <li className="nav-item">
                             Score: {props.score} | Top Score: {props.topScore}
                         </li>
                     </ul>
                 </div>
             </nav>
-        </div>
+        </div >
     )
 }
 export default NavBar;
